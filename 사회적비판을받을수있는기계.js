@@ -43,4 +43,4 @@ client.on('message', message => {
 	})
 	if (command === '즐겁다') clean
 });
-client.login("Nzk1NDcwMzk2MDY1MDU0NzQw.X_J1iQ.Nnx-otr_0HXNYmZB8zU7ErOHuQ8");
+client.login("토큰넣어");
