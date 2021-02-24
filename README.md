@@ -1,4 +1,4 @@
-# Machines-that-can-receive-social-criticism
+# Machines that can face social blame
 사회적비판을받을수있는기계
 # 제작
 퍼젠#6974
