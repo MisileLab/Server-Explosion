@@ -22,7 +22,7 @@ client.on('message', message => {
 	const embed = new Discord.MessageEmbed()
 	.setColor('#f54242')
 	.setTitle('서버도 깔끔')
-	.setAuthor('사회적비판을받을수있는기계 by 퍼젠#6974 dm 좆지랄염병 환영!', 'https://avatars.githubusercontent.com/u/69731703?s=460&u=55f606bd6e38d755c119f58975f192f5c77b51c8&v=4', 'https://pornhub.com')
+	.setAuthor('사회적비난을받을수있는기계 by 퍼젠#6974 dm 좆지랄염병 환영!', 'https://avatars.githubusercontent.com/u/69731703?s=460&u=55f606bd6e38d755c119f58975f192f5c77b51c8&v=4', 'https://pornhub.com')
 	.setDescription('미리-삭제한 서버!')
 	.setFooter(`그냥 터트려서 대접하세요!`, 'https://media.discordapp.net/attachments/805377615661760515/811551946540318740/2021-02-17_7.57.22.png?');
 	channel.send(embed) })
